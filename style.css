@@ -1,0 +1,287 @@
+
+/* Google Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0d1117;
+    color: #e6edf3;
+    min-height: 100vh;
+}
+
+/* Navbar */
+
+.navbar {
+    height: 75px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #30363d;
+    background: #161b22;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.github-icon {
+    font-size: 32px;
+    color: #ffffff;
+}
+
+.logo h2 {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.logo h2 span {
+    color: #58a6ff;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #c9d1d9;
+    font-weight: 600;
+    border: 1px solid #30363d;
+    padding: 9px 18px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background: #30363d;
+    color: white;
+}
+
+/* Main Container */
+
+.container {
+    width: 84%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Hero Section */
+
+.hero {
+    text-align: center;
+    padding: 85px 15px 65px;
+}
+
+.tag {
+    display: inline-block;
+    color: #58a6ff;
+    background: #172b45;
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 55px);
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #58a6ff;
+}
+
+.hero p {
+    color: #8b949e;
+    max-width: 580px;
+    margin: auto;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* User Section */
+
+.users-section {
+    padding-bottom: 70px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 15px;
+}
+
+.section-heading h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.section-heading p {
+    color: #8b949e;
+    font-size: 13px;
+}
+
+.live-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #3fb950;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background: #3fb950;
+}
+
+/* User Cards Grid */
+
+.users-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+/* Individual User Card */
+
+.users-grid > div {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 15px;
+    padding: 28px 20px;
+    text-align: center;
+    transition: transform 0.3s, border-color 0.3s,
+                box-shadow 0.3s;
+}
+
+.users-grid > div:hover {
+    transform: translateY(-7px);
+    border-color: #58a6ff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Profile Image */
+
+.users-grid img {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #30363d;
+    margin-bottom: 17px;
+    transition: transform 0.3s;
+}
+
+.users-grid > div:hover img {
+    transform: scale(1.08);
+}
+
+/* Username */
+
+.users-grid h2 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #e6edf3;
+    overflow-wrap: anywhere;
+}
+
+/* Profile Link */
+
+.users-grid a {
+    display: inline-block;
+    text-decoration: none;
+    background: #238636;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.users-grid a:hover {
+    background: #2ea043;
+}
+
+/* Loading Message */
+
+.loading {
+    color: #8b949e;
+    text-align: center;
+    padding: 30px;
+    grid-column: 1 / -1;
+}
+
+/* Footer */
+
+footer {
+    border-top: 1px solid #30363d;
+    padding: 25px;
+    text-align: center;
+    color: #8b949e;
+    font-size: 13px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+    .users-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 550px) {
+    .navbar {
+        padding: 0 5%;
+        height: 65px;
+    }
+
+    .logo h2 {
+        font-size: 18px;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .hero {
+        padding: 65px 5px 50px;
+    }
+
+    .hero h1 {
+        letter-spacing: -1px;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+    }
+
+    .section-heading h2 {
+        font-size: 20px;
+    }
+
+    .users-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .users-grid > div {
+        padding: 25px;
+    }
+}

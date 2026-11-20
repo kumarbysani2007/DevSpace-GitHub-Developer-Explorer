@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub User Explorer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <span class="github-icon">⌘</span>
+            <h2>Dev<span>Explorer</span></h2>
+        </div>
+
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            GitHub
+        </a>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <span class="tag">DEVELOPER COMMUNITY</span>
+
+            <h1>Discover GitHub <span>Developers.</span></h1>
+
+            <p>
+                Explore developers from around the world.
+                Discover their profiles and connect with the coding community.
+            </p>
+        </section>
+
+        <section class="users-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Explore Developers</h2>
+                    <p>Discover amazing developers on GitHub</p>
+                </div>
+
+                <span class="live-status">
+                    <span class="dot"></span>
+                    Live API
+                </span>
+            </div>
+
+            <div id="first" class="users-grid">
+                <p class="loading">Loading developers...</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Built with using JavaScript & GitHub API</p>
+    </footer>
+
+</body>
+</html>
